@@ -1,14 +1,12 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import React, { useState } from "react";
 import "./Login.scss"; // Component-specific SCSS file
 import {
   signInFailure,
   signInStart,
   signInSuccess,
-  UserState,
 } from "../../../redux/user/userslice";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import { useNavigate } from "react-router";
 import config from "../../../Config/config";
 
@@ -18,9 +16,7 @@ export default function AdminLogin() {
   const [error,setError]=useState("");
 
 
-  const {loading} = useSelector(
-    (state: { user: UserState }) => state.user
-  );
+ 
 
   const [form, setForm] = useState({
     email: "",

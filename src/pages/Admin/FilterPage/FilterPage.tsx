@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, {useState } from "react";
+import {useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Navigate, useNavigate } from "react-router";
 import { signOutUserStart, UserState } from "../../../redux/user/userslice";

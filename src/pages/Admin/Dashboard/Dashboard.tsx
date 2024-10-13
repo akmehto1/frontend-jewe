@@ -1,13 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { signOutUserStart, UserState } from '../../../redux/user/userslice';
+
 import './Dashboard.scss';
 
 import { Container, Row, Col, Card } from 'react-bootstrap';
 
 import { Navigate } from 'react-router';
 import config from '../../../Config/config';
+import { signOutUserStart, UserState } from '../../../redux/user/userslice';
 
 export default function AdminDashboard() {
     const dispatch=useDispatch();

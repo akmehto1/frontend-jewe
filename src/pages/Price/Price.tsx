@@ -1,9 +1,11 @@
-import React from 'react';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import 'bootstrap/dist/css/bootstrap.min.css'; // Make sure Bootstrap is imported
-import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router';
-import { UserState } from '../../redux/user/userslice';
+import {useSelector } from 'react-redux';
+
+
 import config from '../../Config/config';
+import { UserState } from '../../redux/user/userslice';
 
 const PricingPage = () => {
    

@@ -1,10 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { UserState } from '../../../redux/user/userslice';
+
 import './UserDashboard.scss';
 
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import config from '../../../Config/config';
+import { UserState } from '../../../redux/user/userslice';
 
 // Define the types for your API responses
 interface User {
@@ -49,7 +51,7 @@ export default function UserDashboard() {
 
         const result = await response.json();
         setData(result.allUser || []);
-      } catch (error) {
+      } catch (error:any) {
         console.error(error.message);
       }
     };
@@ -71,7 +73,7 @@ export default function UserDashboard() {
 
         const result = await response.json();
         setPlan({ plan: result.plan.plan, amount: result.plan.amount });
-      } catch (error) {
+      } catch (error:any) {
         console.error(error.message);
       }
     };
@@ -93,7 +95,7 @@ export default function UserDashboard() {
 
         const result = await response.json();
         setCommission(result.value);
-      } catch (error) {
+      } catch (error:any) {
         console.error(error.message);
       }
     };

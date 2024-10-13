@@ -10,10 +10,11 @@ import UserProtectRoute from "./Componets/ProtectedRoute/ProtectedRoute";
 import UserDashboard from "./pages/User/Dashboard/Dashboard";
 import AdminProtectRoute from "./Componets/ProtectedRoute/AdminProtectRoute";
 import AdminLogin from "./pages/Admin/Login/login";
-import AdminDashboard from "./pages/Admin/Dashboard/dashboard";
+
 import FilterPage from "./pages/Admin/FilterPage/FilterPage";
 import PricingPage from "./pages/Price/Price";
 import Footer from "./Layouts/Footer/Footer";
+import AdminDashboard from "./pages/Admin/Dashboard/Dashboard";
 
 function App() {
   return (

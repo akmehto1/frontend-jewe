@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Carousel } from 'react-bootstrap'
 import './Home.scss';
 import s1 from '../../assets/images/home/s1.jpg';
