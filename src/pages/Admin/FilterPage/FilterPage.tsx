@@ -2,8 +2,9 @@
 import {useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Navigate, useNavigate } from "react-router";
-import { signOutUserStart, UserState } from "../../../redux/user/userslice";
+
 import config from "../../../Config/config";
+import { signOutUserStart, UserState } from "../../../redux/user/userslice";
 
 
 export default function FilterPage() {

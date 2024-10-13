@@ -1,7 +1,18 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useRef, useState } from 'react';
 
 import { signup } from '../../../Service/Auth';
 import { ISignupForm } from '../../../Interface/Auth/ISignup';
+
+
+
+
+
+
+
+
+
+
 
 
 export default function SignUp() {
@@ -18,7 +29,9 @@ export default function SignUp() {
   const referredByRef = useRef<HTMLInputElement>(null);
   const isCheckedTCRef = useRef<HTMLInputElement>(null);
 
+
   // Handle form submission
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -57,6 +70,8 @@ export default function SignUp() {
       setError(error.message);  // Handle errors
     }
   };
+
+
 
   return (
     <div>

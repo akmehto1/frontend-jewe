@@ -1,10 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
-import userReducer from './user/userslice';
+import userReducer, {} from './user/userslice';
 import { createTransform } from 'redux-persist';
 
-const rootReducer = combineReducers({ user: userReducer });
+const rootReducer = combineReducers({ user: userReducer || undefined });
 
 // Expiration time set to 24 hours (86400000 ms)
 const expirationTime = 43200000;  // 60 seconds * 1000 milliseconds
@@ -12,14 +14,14 @@ const expirationTime = 43200000;  // 60 seconds * 1000 milliseconds
 // Create a custom transform to add and check the expiration time
 const expireTransform = createTransform(
   // On save (inbound state)
-  (inboundState, key) => {
+  (inboundState, _key) => {
     return {
       ...inboundState || {},
       _persistedAt: Date.now(),
     };
   },
   // On load (outbound state)
-  (outboundState, key) => {
+  (outboundState,_key) => {
     if (!outboundState) return outboundState;
 
     const now = Date.now();
@@ -42,7 +44,7 @@ const persistConfig = {
   transforms: [expireTransform], // Apply the expiration transform
 };
 
-const persistedReducer = persistReducer(persistConfig, rootReducer);
+const persistedReducer = persistReducer(persistConfig,rootReducer);
 
 export const store = configureStore({
   reducer: persistedReducer,
