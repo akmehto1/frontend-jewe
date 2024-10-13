@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import "./Login.scss"; // Component-specific SCSS file
 import {
@@ -16,7 +18,7 @@ export default function AdminLogin() {
   const [error,setError]=useState("");
 
 
-  const { loading} = useSelector(
+  const {loading} = useSelector(
     (state: { user: UserState }) => state.user
   );
 

@@ -6,9 +6,7 @@ import { UserState } from '../../redux/user/userslice';
 import config from '../../Config/config';
 
 const PricingPage = () => {
-    const dispatch = useDispatch();
-    const navigate = useNavigate(); // Hook to programmatically navigate
-
+   
     const { currentUser } = useSelector((state: { user: UserState }) => state.user);
     
 
