@@ -1,0 +1,46 @@
+// Dashboard.scss
+
+$primary-color: #007bff; // Bootstrap primary color
+$text-color: #343a40; // Dark text color
+$scrollable-height: 200px; // Height for the scrollable container
+
+.dashboard-title {
+    font-size: 1.5rem; // Custom font size
+    color: $text-color; // Use dark color
+}
+
+.dashboard-value {
+    font-size: 2rem; // Larger font size for values
+    font-weight: bold; // Bold text for emphasis
+    color: $primary-color; // Use Bootstrap primary color
+}
+
+.card {
+    transition: transform 0.3s; // Smooth scaling effect
+
+    &:hover {
+        transform: scale(1.05); // Scale effect on hover
+    }
+}
+
+.scrollable-container {
+    max-height: $scrollable-height; // Set maximum height
+    overflow-y: auto; // Enable vertical scroll
+    border: 1px solid $text-color; // Optional border for visibility
+    border-radius: 0.25rem; // Optional border-radius for a rounded look
+    padding: 0.5rem; // Padding for inner space
+    background-color: #fff; // White background for clarity
+}
+
+.scrollable-item {
+    padding: 0.5rem; // Padding for each item
+    margin-bottom: 0.5rem; // Space between items
+    border: 1px solid #ccc; // Light border for items
+    border-radius: 0.25rem; // Rounded corners for items
+    transition: transform 0.3s; // Smooth scaling effect for items
+
+    &:hover {
+        transform: scale(1.02); // Scale effect on hover for items
+        background-color: #f8f9fa; // Light background on hover
+    }
+}
