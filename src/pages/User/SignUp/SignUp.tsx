@@ -51,7 +51,7 @@ export default function SignUp() {
       userRefferalId: userRefferalIdRef.current?.value || undefined,
       referredBy:referredByRef.current?.value || "null",
       isCheckedTC: isCheckedTCRef.current?.checked || false,
-      role:"admin"
+      role:"user"
     };
 
     console.log(formValues);
