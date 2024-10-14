@@ -89,7 +89,7 @@ export default function AdminDashboard() {
             <Card className="text-center">
               <Card.Body>
                 <Card.Title className="dashboard-title">Total Revenue</Card.Title>
-                <Card.Text className="dashboard-value">${totalAmount}</Card.Text>
+                <Card.Text className="dashboard-value">₹{totalAmount}</Card.Text>
               </Card.Body>
             </Card>
           </Col>
