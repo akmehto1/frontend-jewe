@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "npm run build npm run dev"
+    "start": "npm run build && npm run dev"
   },
   "dependencies": {
     "@coreui/coreui": "^5.1.2",
@@ -36,8 +36,7 @@
     "gh-pages": "^6.2.0",
     "globals": "^15.9.0",
     "postcss": "^8.4.47",
-    "sass": "^1.79.4",
-    "tailwindcss": "^3.4.13",
+    "sass": "^1.79.5",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1"
