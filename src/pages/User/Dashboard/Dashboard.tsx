@@ -80,7 +80,7 @@ export default function UserDashboard() {
 
     const fetchCommission = async () => {
       try {
-        const response = await fetch(`${config.apiBaseUrl}/user/commision`, {
+        const response = await fetch(`${config.apiBaseUrl}user/commision`, {
           method: 'GET',
           credentials: 'include',
           headers: {
