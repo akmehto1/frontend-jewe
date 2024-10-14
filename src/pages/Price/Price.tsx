@@ -40,10 +40,13 @@ const PricingPage = () => {
         console.log(result);
        
     
-        alert(result.message);
+        
         if (!response.ok) {
+          alert(result.message);
           throw new Error(result.message);
         }
+
+        alert("plan buy");
        
       } catch (error) {
        
