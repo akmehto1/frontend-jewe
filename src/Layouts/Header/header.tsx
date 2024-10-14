@@ -61,16 +61,12 @@ const Navbar = () => {
             </li>}
 
             {currentUser && currentUser.role=='admin' && <li className="nav-item">
-              <NavLink className="nav-link" to="/admin/filter">
-                Filter
-              </NavLink>
-            </li>}
-            
-           {!currentUser &&  <li className="nav-item">
               <NavLink className="nav-link" to="/admin/dashboard">
                 Dashboard
               </NavLink>
             </li>}
+            
+          
 
 
             

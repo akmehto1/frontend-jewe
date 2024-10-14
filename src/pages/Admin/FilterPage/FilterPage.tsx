@@ -177,7 +177,7 @@ export default function FilterPage() {
                   </div>
                 </td>
                 <td>
-                  <p className="fw-normal mb-1">{user.referredBy?user.referredBy.userRefferalId:'null'}</p>
+                  <p className="fw-normal mb-1">{user.referredBy?user.referredBy.userRefferalId:'No One'}</p>
                 </td>
                 <td>
                   <span className={`badge ${user.status === 'Active' ? 'badge-success' : 'badge-warning'} rounded-pill d-inline`}>
