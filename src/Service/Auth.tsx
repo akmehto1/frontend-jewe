@@ -4,7 +4,7 @@ import config from "../Config/config";
 
 export const signup = async (formData:any) => {
   try {
-    const response = await fetch(`${config.apiBaseUrl}auth/sign-up`, {
+    const response = await fetch(`${config.apiBaseUrl}user/auth/sign-up`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
