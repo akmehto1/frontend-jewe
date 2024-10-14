@@ -44,7 +44,11 @@ const persistConfig = {
   transforms: [expireTransform], // Apply the expiration transform
 };
 
-const persistedReducer = persistReducer(persistConfig,rootReducer);
+// const persistedReducer = persistReducer<RootState>(persistConfig, rootReducer);
+const persistedReducer = persistReducer<any, any>(persistConfig, rootReducer);
+
+
+// const persistedReducer = persistReducer(persistConfig,rootReducer);
 
 export const store = configureStore({
   reducer: persistedReducer,
